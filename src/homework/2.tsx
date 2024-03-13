@@ -5,6 +5,12 @@ type State = {
   requestStep: "start" | "pending" | "finished" | "idle";
 };
 
+type Action =
+  | { type: "START_REQUEST" }
+  | { type: "PENDING_REQUEST" }
+  | { type: "FINISH_REQUEST" }
+  | { type: "RESET_REQUEST" };
+
 const initialState: State = {
   isRequestInProgress: false,
   requestStep: "idle",
