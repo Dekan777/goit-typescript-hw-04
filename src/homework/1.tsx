@@ -5,10 +5,10 @@ type Props = {
   onContentEndVisible: () => void;
 };
 
-// Опишіть Props
+// + Опишіть Props
 export function Observer({ children, onContentEndVisible }: Props) {
-  // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
-  const endContentRef = useRef(null);
+  //+  Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
+  const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
