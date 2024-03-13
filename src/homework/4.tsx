@@ -28,6 +28,10 @@ type PropsProvider = {
   children;
 };
 
+type PropsProvider = {
+  children: React.ReactNode;
+};
+
 function MenuProvider({ children }: PropsProvider) {
   // Додати тип для SelectedMenu він повинен містити { id }
   const [selectedMenu, setSelectedMenu] = useState<SelectedMenu>({});
